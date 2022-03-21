@@ -21,6 +21,7 @@ public class _1874 {
 
     public static void main(String[] args) {
         String[] arrs = {"push", "push", "push", "push", "pop", "pop", "push", "push", "pop", "pop"};
+
         Arrays.stream(arrs).forEach(arr ->  {toStack(arr);});
     }
 }
