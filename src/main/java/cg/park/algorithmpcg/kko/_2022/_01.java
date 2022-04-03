@@ -1,10 +1,10 @@
-package cg.park.algorithmpcg.kko;
+package cg.park.algorithmpcg.kko._2022;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 // 신고 결과 받기
-public class _2020_01 {
+public class _01 {
 
     public static int[] solution(String[] id_list, String[] report, int k) {
         int[] answer = new int[id_list.length];
