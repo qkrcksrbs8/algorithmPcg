@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+//https://programmers.co.kr/learn/courses/30/lessons/92341
 public class _03 {
 
     static HashMap<String, String> inoutMap = new HashMap<>();
@@ -41,7 +42,7 @@ public class _03 {
             return;
         }
         if (sumMap.containsKey((history[1])));
-        sumMap.put((history[1]), sumMap.getOrDefault(history[1], 0) + sumParkingTime(history[1]));
+        sumMap.put((history[1]), sumParkingTime(history[1]) - sumMap.getOrDefault(history[1], 0));
     }
 
     public static int[] solution(int[] fees, String[] records) {
