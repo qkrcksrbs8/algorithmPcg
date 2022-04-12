@@ -3,7 +3,10 @@ package cg.park.algorithmpcg.baekjoon;
 import lombok.Builder;
 import lombok.Data;
 
-@Builder
+import java.util.ArrayList;
+import java.util.List;
+
+//@Builder
 @Data
 public class MyDate {
     private int day = 0;
