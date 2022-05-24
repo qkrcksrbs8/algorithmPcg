@@ -3,8 +3,7 @@ package cg.park.algorithmpcg.baekjoon;
 import lombok.Builder;
 import lombok.Data;
 
-@Builder
-@Data
+
 public class MyDate {
     private int day = 0;
     private int month = 0;
