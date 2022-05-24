@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 public class tddTest {
     public static void main(String[] args) {
-
+        int x = splitAndSum2("1,2:3");
+        System.out.println(x);
     }
 
     // 1 => 1
@@ -27,15 +28,21 @@ public class tddTest {
     }
 
     public static int splitAndSum2(String text) {
-        return isBlank(text) ? 0 : sum(text.split(",|:"));
+        return isBlank(text)
+                ? 0
+                : sum(toInt(text.split(",|:")));
     }
 
     public static boolean isBlank(String str) {
         return str == null || str.length() == 0;
     }
 
-    private static int sum(String[] values) {
-        return Arrays.stream(values).mapToInt(v -> Integer.parseInt(v)).sum();
+    private static int[] toInt(String[] values) {
+        return Arrays.stream(values).mapToInt(Integer::parseInt).toArray();
+    }
+
+    private static int sum(int[] values) {
+        return Arrays.stream(values).sum();
     }
 
 }
