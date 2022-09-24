@@ -1,19 +1,18 @@
 package cg.park.algorithmpcg.mytest.ugkim;
 
-import org.springframework.util.StringUtils;
 
 import java.util.Arrays;
 
 public class tddTest {
     public static void main(String[] args) {
-        int x = splitAndSum2("1,2:3");
-        System.out.println(x);
+
+        splitAndsum(null);
     }
 
     // 1 => 1
     // 1,2 => 3
     // 1,2:3 => 6
-    public static int splitAndSum(String text) {
+    public static int splitAndSumTest(String text) {
         int result = 0;
         if (text == null || text.isEmpty()) {
             result = 0;
@@ -27,22 +26,24 @@ public class tddTest {
         return result;
     }
 
-    public static int splitAndSum2(String text) {
-        return isBlank(text)
+    public static int splitAndsum(String number) {
+        return (isBlank(number))
                 ? 0
-                : sum(toInt(text.split(",|:")));
+                : sum(toInt(number.split(",|:")));
     }
 
-    public static boolean isBlank(String str) {
-        return str == null || str.length() == 0;
+    public static boolean isBlank(String text) {
+        return text == null || text.isEmpty();
     }
 
-    private static int[] toInt(String[] values) {
+    public static int sum (int[] values) {
+        return Arrays.stream(values).sum();
+    }
+
+    public static int[] toInt(String[] values) {
         return Arrays.stream(values).mapToInt(Integer::parseInt).toArray();
     }
 
-    private static int sum(int[] values) {
-        return Arrays.stream(values).sum();
-    }
+
 
 }
