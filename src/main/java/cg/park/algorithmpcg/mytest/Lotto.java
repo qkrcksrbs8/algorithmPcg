@@ -1,4 +1,4 @@
-package cg.park.algorithmpcg;
+package cg.park.algorithmpcg.mytest;
 
 import java.util.ArrayList;
 import java.util.HashSet;
